@@ -167,7 +167,12 @@ class Director:
         message.set_color(RED)
         message.set_position(position)
         cast.add_actor("messages", message)
+        # change ship to red
+        
+        ship = cast.get_first_actor("ships")
+        ship.set_color(RED)
         self._game_ended = True
+
         
         
     def _move_invaders(self, cast):
